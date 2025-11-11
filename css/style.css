@@ -1412,6 +1412,94 @@ p {
     color: rgba(255, 255, 255, 0.95);
 }
 
+/* ==================== Gallery Section ==================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.gallery-item {
+    position: relative;
+    background: var(--color-gray-50);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.gallery-large {
+    grid-column: span 2;
+}
+
+.gallery-wide {
+    grid-column: span 2;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-large .gallery-image {
+    height: 400px;
+}
+
+.gallery-caption {
+    padding: var(--spacing-lg);
+}
+
+.gallery-caption h3 {
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--color-blue);
+    margin-bottom: var(--spacing-sm);
+}
+
+.gallery-caption p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-gray-700);
+}
+
+/* ==================== Hero with Background ==================== */
+.hero-with-bg {
+    position: relative;
+    background-image: url('../images/download.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 120, 215, 0.9) 0%, rgba(216, 0, 115, 0.85) 100%);
+    z-index: 1;
+}
+
+.hero-with-bg .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-with-bg .hero-title,
+.hero-with-bg .hero-subtitle,
+.hero-with-bg .hero-description {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* ==================== Responsive Enhancements ==================== */
 @media (max-width: 768px) {
     .principle-section,
@@ -1431,6 +1519,15 @@ p {
     
     .practitioner-visual-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-large,
+    .gallery-wide {
+        grid-column: span 1;
     }
 }
 
