@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Principles - Fluent Design System | Design Gallery</title>
+    <meta name="description" content="Explore the core design principles of Microsoft's Fluent Design and Metro: typography, color, motion, light, depth, material, and scale.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-logo">Fluent Design</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" role="navigation">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="timeline.html" class="nav-link">Timeline</a></li>
+                <li><a href="principles.html" class="nav-link active" aria-current="page">Principles</a></li>
+                <li><a href="designers.html" class="nav-link">Designers</a></li>
+                <li><a href="collaboration.html" class="nav-link">Collaboration Story</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero hero-secondary">
+        <div class="container">
+            <h1 class="hero-title">Design Principles</h1>
+            <p class="hero-subtitle">The foundation of Microsoft's design language</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section">
+        <div class="container">
+            <div class="intro-text">
+                <p class="text-large">Fluent Design is built on core principles that evolved from Metro's 2010 foundation. These principles guide every interface decision, from Windows 11 to Microsoft 365.</p>
+            </div>
+
+            <!-- Metro Principles (2010-2016) -->
+            <div class="principle-category">
+                <h2 class="category-title">Metro Principles (2010-2016)</h2>
+                <p class="category-intro">The original Metro design language introduced revolutionary principles that challenged skeuomorphic design trends.</p>
+
+                <div class="principle-section">
+                    <div class="principle-content">
+                        <h3 class="principle-title">1. Content Before Chrome</h3>
+                        <p class="principle-description">The founding Metro principle: prioritize information over interface decoration. Remove unnecessary UI elements ("chrome") that don't serve the content.</p>
+                        
+                        <div class="principle-details">
+                            <h4>Implementation:</h4>
+                            <ul class="principle-list">
+                                <li>Full-screen content experiences</li>
+                                <li>Minimal navigation chrome</li>
+                                <li>Edge-to-edge layouts</li>
+                                <li>Remove decorative elements</li>
+                                <li>Every pixel serves content or function</li>
+                            </ul>
+                        </div>
+
+                        <div class="principle-example">
+                            <h4>Real-World Examples:</h4>
+                            <p><strong>Windows Phone 7:</strong> Text messages filled the screen with minimal UI decoration</p>
+                            <p><strong>Windows 8:</strong> Full-screen Start screen prioritized Live Tiles over window chrome</p>
+                            <p><strong>Today:</strong> Microsoft Teams maximizes chat/meeting content, minimizes sidebar</p>
+                        </div>
+                    </div>
+                    <div class="principle-visual">
+                        <img src="research/references/Windows-Phone-600x667.avif" alt="Windows Phone Metro interface showing content-first design" class="principle-image">
+                        <p class="image-caption">Windows Phone: Content dominates, chrome minimized</p>
+                    </div>
+                </div>
+
+                <div class="principle-section principle-reverse">
+                    <div class="principle-visual">
+                        <img src="research/references/metrotwit-600x518.avif" alt="MetroTwit application showing typography-first interface" class="principle-image">
+                        <p class="image-caption">MetroTwit: Large, bold typography as primary UI element</p>
+                    </div>
+                    <div class="principle-content">
+                        <h3 class="principle-title">2. Typography as Primary Element</h3>
+                        <p class="principle-description">Metro made typography the star. Dramatically large text (72-96px) creates hierarchy and visual impact without decorative elements.</p>
+                        
+                        <div class="principle-details">
+                            <h4>Implementation:</h4>
+                            <ul class="principle-list">
+                                <li>Hero text: 72-96px (dramatically large)</li>
+                                <li>H1 headings: 48-56px</li>
+                                <li>Body text: 14-16px (utilitarian)</li>
+                                <li>Segoe UI font family</li>
+                                <li>Generous letter-spacing on large text</li>
+                                <li>Sentence case (not ALL CAPS)</li>
+                            </ul>
+                        </div>
+
+                        <div class="principle-example">
+                            <h4>Philosophy:</h4>
+                            <p>Type creates hierarchy through <strong>size contrast alone</strong>, not through color, weight variations, or decorative elements. A 96px heading next to 15px body text needs no other differentiation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principle-section">
+                    <div class="principle-content">
+                        <h3 class="principle-title">3. Bold, Systematic Color</h3>
+                        <p class="principle-description">Pure, saturated colors from a defined palette. No gradients (in pure Metro), no subtle variations. Each color has clear purpose and meaning.</p>
+                        
+                        <div class="principle-details">
+                            <h4>Metro Color Palette:</h4>
+                            <div class="color-swatches">
+                                <div class="color-swatch" style="background: #0078D7;">
+                                    <span class="swatch-label">Microsoft Blue</span>
+                                    <span class="swatch-hex">#0078D7</span>
+                                </div>
+                                <div class="color-swatch" style="background: #D80073;">
+                                    <span class="swatch-label">Magenta</span>
+                                    <span class="swatch-hex">#D80073</span>
+                                </div>
+                                <div class="color-swatch" style="background: #00ABA9;">
+                                    <span class="swatch-label">Teal</span>
+                                    <span class="swatch-hex">#00ABA9</span>
+                                </div>
+                                <div class="color-swatch" style="background: #FA6800;">
+                                    <span class="swatch-label">Orange</span>
+                                    <span class="swatch-hex">#FA6800</span>
+                                </div>
+                                <div class="color-swatch" style="background: #A4C400;">
+                                    <span class="swatch-label">Lime</span>
+                                    <span class="swatch-hex">#A4C400</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="principle-example">
+                            <h4>Usage Rules:</h4>
+                            <ul class="principle-list">
+                                <li>High contrast: white text on colored backgrounds</li>
+                                <li>One accent color per interface</li>
+                                <li>Flat colors (no gradients in pure Metro)</li>
+                                <li>Colors communicate hierarchy and function</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="principle-visual">
+                        <img src="research/references/Chrome-Web-Store.avif" alt="Chrome Web Store with Metro-influenced design" class="principle-image">
+                        <p class="image-caption">Chrome Web Store: Bold color blocks, clear hierarchy</p>
+                    </div>
+                </div>
+
+                <div class="principle-section principle-reverse">
+                    <div class="principle-visual">
+                        <img src="research/references/The-verge.avif" alt="The Verge website with Metro-influenced layout" class="principle-image">
+                        <p class="image-caption">The Verge: Grid-based, tile-inspired layout</p>
+                    </div>
+                    <div class="principle-content">
+                        <h3 class="principle-title">4. Tile-Based Grid Layouts</h3>
+                        <p class="principle-description">Metro's signature visual: rectangular tiles of varied proportions arranged on a strict grid. Asymmetric but ordered.</p>
+                        
+                        <div class="principle-details">
+                            <h4>Grid Specifications:</h4>
+                            <ul class="principle-list">
+                                <li>12-column base grid (responsive)</li>
+                                <li>Tile proportions: 1x1, 2x1, 1x2, 2x2</li>
+                                <li>Gaps: 8-12px between tiles</li>
+                                <li>Margins: 24-32px from edges</li>
+                                <li>Everything aligns to grid (strict)</li>
+                                <li>Asymmetric variety within order</li>
+                            </ul>
+                        </div>
+
+                        <div class="principle-example">
+                            <h4>Live Tiles Innovation:</h4>
+                            <p>Windows Phone introduced <strong>Live Tiles</strong>—tiles showing dynamic content updates. Tiles weren't just navigation; they were information displays.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="principle-section">
+                    <div class="principle-content">
+                        <h3 class="principle-title">5. Authentically Digital</h3>
+                        <p class="principle-description">Reject skeuomorphism. No fake leather, wood textures, or physical metaphors. Design should be honest about being digital.</p>
+                        
+                        <div class="principle-details">
+                            <h4>What This Means:</h4>
+                            <ul class="principle-list">
+                                <li>No fake materials (leather, wood, paper)</li>
+                                <li>No realistic shadows mimicking physical objects</li>
+                                <li>No textured backgrounds</li>
+                                <li>Flat, honest representation of interface elements</li>
+                                <li>Embrace the screen as medium</li>
+                            </ul>
+                        </div>
+
+                        <div class="principle-example">
+                            <h4>Historical Context:</h4>
+                            <p><strong>2010:</strong> iOS used leather stitching, wood grain, felt textures</p>
+                            <p><strong>Metro's Revolution:</strong> Pure digital aesthetic, no physical metaphors</p>
+                            <p><strong>2013:</strong> Apple iOS 7 adopts flat design, validating Metro's vision</p>
+                        </div>
+                    </div>
+                    <div class="principle-visual">
+                        <img src="research/references/Snowbird-600x337.avif" alt="Snowbird app with authentic digital design" class="principle-image">
+                        <p class="image-caption">Snowbird: Flat, honest digital interface</p>
+                    </div>
+                </div>
+
+                <div class="principle-single">
+                    <h3 class="principle-title">6. Information Density</h3>
+                    <p class="principle-description">Metro fits more content on screen than iOS or Android. Efficient use of space without sacrificing clarity.</p>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h4>iOS / Material Design</h4>
+                            <ul class="principle-list">
+                                <li>18-21px body text (spacious)</li>
+                                <li>Generous padding everywhere</li>
+                                <li>Line-height: 1.8+</li>
+                                <li>Fewer items visible per screen</li>
+                            </ul>
+                        </div>
+                        <div class="comparison-item">
+                            <h4>Metro / Fluent</h4>
+                            <ul class="principle-list">
+                                <li>14-16px body text (efficient)</li>
+                                <li>Tighter, functional padding</li>
+                                <li>Line-height: 1.6</li>
+                                <li>More content per screen</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p class="principle-note"><strong>Balance:</strong> Dense but not cluttered. Utilitarian but not overwhelming. Business software needs efficiency.</p>
+                </div>
+            </div>
+
+            <!-- Fluent Principles (2017-Present) -->
+            <div class="principle-category">
+                <h2 class="category-title">Fluent Design Principles (2017-Present)</h2>
+                <p class="category-intro">Fluent evolved Metro by adding warmth and depth while maintaining the core philosophy. Five new principles build on Metro's foundation.</p>
+
+                <div class="fluent-principles-grid">
+                    <div class="fluent-principle-card">
+                        <div class="fluent-icon">💡</div>
+                        <h3 class="fluent-principle-title">Light</h3>
+                        <p>Illumination draws attention and guides focus. Light reveals structure, creates hierarchy, and makes interfaces feel alive.</p>
+                        <div class="fluent-details">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>Hover reveal lighting</li>
+                                <li>Reveal borders on elements</li>
+                                <li>Subtle glow on focus states</li>
+                                <li>Light following cursor</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fluent-principle-card">
+                        <div class="fluent-icon">📏</div>
+                        <h3 class="fluent-principle-title">Depth</h3>
+                        <p>Layered z-axis creates spatial hierarchy. Not just x and y coordinates—elements exist in 3D space.</p>
+                        <div class="fluent-details">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>Subtle shadows (0 2px 8px rgba)</li>
+                                <li>Layered UI elements</li>
+                                <li>Parallax scrolling</li>
+                                <li>Cards floating above backgrounds</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fluent-principle-card">
+                        <div class="fluent-icon">⚡</div>
+                        <h3 class="fluent-principle-title">Motion</h3>
+                        <p>Fast, purposeful animation. Every motion has meaning. 200-300ms transitions with ease-out timing.</p>
+                        <div class="fluent-details">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>200-300ms duration (fast)</li>
+                                <li>Ease-out timing (natural)</li>
+                                <li>Connected animations between views</li>
+                                <li>Smooth, 60fps performance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fluent-principle-card">
+                        <div class="fluent-icon">🪟</div>
+                        <h3 class="fluent-principle-title">Material</h3>
+                        <p>Acrylic—frosted glass effect with blur and noise texture. Mica—natural, responsive backgrounds that adapt to content.</p>
+                        <div class="fluent-details">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>Acrylic: translucent, blurred backgrounds</li>
+                                <li>Mica: context-aware surfaces</li>
+                                <li>Noise texture for depth</li>
+                                <li>Subtle transparency</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fluent-principle-card">
+                        <div class="fluent-icon">📱</div>
+                        <h3 class="fluent-principle-title">Scale</h3>
+                        <p>Responsive across all device sizes and input methods. Same interface adapts from phone to tablet to desktop to Xbox.</p>
+                        <div class="fluent-details">
+                            <h4>Implementation:</h4>
+                            <ul>
+                                <li>Fluid typography scaling</li>
+                                <li>Adaptive layouts</li>
+                                <li>Touch, mouse, gamepad support</li>
+                                <li>Responsive grid system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison -->
+            <div class="comparison-section">
+                <h2 class="section-title">Metro vs. Fluent: Evolution</h2>
+                
+                <div class="evolution-comparison">
+                    <div class="comparison-column">
+                        <h3>Metro (2010-2016)</h3>
+                        <img src="research/references/Microsoft-600x609.avif" alt="Microsoft Metro design example" class="comparison-image">
+                        <ul class="comparison-list">
+                            <li>✓ Flat (no shadows)</li>
+                            <li>✓ Sharp corners (0px radius)</li>
+                            <li>✓ Pure colors (no gradients)</li>
+                            <li>✓ Dramatic typography</li>
+                            <li>✓ Tile-based grid</li>
+                            <li>✓ Content-first</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-arrow">→</div>
+                    <div class="comparison-column">
+                        <h3>Fluent (2017-Present)</h3>
+                        <div class="comparison-image-placeholder">
+                            <p>Windows 11 UI</p>
+                        </div>
+                        <ul class="comparison-list">
+                            <li>✓ Subtle shadows (depth)</li>
+                            <li>✓ Rounded corners (8px)</li>
+                            <li>✓ Gradients allowed</li>
+                            <li>✓ Dramatic typography (maintained)</li>
+                            <li>✓ Card-based evolution</li>
+                            <li>✓ Content-first (maintained)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="what-stayed">
+                    <h3>What Stayed the Same:</h3>
+                    <ul class="principle-list">
+                        <li><strong>Typography dominance:</strong> 72-96px hero text still the star</li>
+                        <li><strong>Content before chrome:</strong> Core philosophy unchanged</li>
+                        <li><strong>Information density:</strong> Efficient space usage maintained</li>
+                        <li><strong>Fast motion:</strong> 200-300ms animations still standard</li>
+                        <li><strong>Systematic approach:</strong> Grids, tokens, design systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 class="footer-title">Fluent Design Gallery</h4>
+                    <p>Exploring Microsoft's typography-first design language from Metro to Fluent.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="principles.html">Principles</a></li>
+                        <li><a href="designers.html">Designers</a></li>
+                        <li><a href="collaboration.html">Collaboration Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.microsoft.com/design/fluent/" target="_blank" rel="noopener noreferrer">Fluent Design System</a></li>
+                        <li><a href="https://developer.microsoft.com/en-us/fluentui" target="_blank" rel="noopener noreferrer">Fluent UI Library</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Design Gallery. Educational project exploring Fluent Design principles.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
