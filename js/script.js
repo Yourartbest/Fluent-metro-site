@@ -1,3 +1,10 @@
+/*
+    Name: Josh Mantilla
+    Date: 11/12/25
+    Course: IS373-001
+    Project: Fluent Design / Metro Website - Main JavaScript
+*/
+
 // Fluent Design / Metro JavaScript
 
 // Mobile Navigation Toggle
