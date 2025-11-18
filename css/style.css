@@ -225,13 +225,68 @@ p {
     color: var(--color-blue);
 }
 
+/* Mobile Navigation */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
+        z-index: 1001;
     }
     
     .nav-menu {
-        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        gap: 0;
+        padding: var(--spacing-lg);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    }
+    
+    .nav-menu.active {
+        max-height: 500px;
+        opacity: 1;
+        display: flex;
+    }
+    
+    .nav-menu li {
+        border-bottom: 1px solid var(--color-gray-200);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: var(--spacing-md) 0;
+        font-size: 16px;
+    }
+    
+    /* Animate hamburger to X */
+    .nav-toggle.active .hamburger {
+        background-color: transparent;
+    }
+    
+    .nav-toggle.active .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    .nav-toggle.active .hamburger::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+    
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        transition: all 0.3s ease-out;
     }
 }
 
@@ -280,12 +335,49 @@ p {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: var(--spacing-2xl) 0;
+        min-height: 400px;
+    }
+    
     .hero-title {
         font-size: 56px;
     }
     
     .hero-subtitle {
         font-size: 20px;
+    }
+    
+    .hero-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 350px;
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+    }
+    
+    .hero-description {
+        font-size: 15px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -1509,6 +1601,14 @@ p {
 
 /* ==================== Responsive Enhancements ==================== */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
     .principle-section,
     .principle-section:nth-child(even) {
         grid-template-columns: 1fr;
@@ -1517,11 +1617,13 @@ p {
     
     .comparison-container {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
     
     .designer-profile,
     .designer-profile:nth-child(even) {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
     }
     
     .practitioner-visual-grid {
@@ -1530,25 +1632,56 @@ p {
     
     .gallery-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
     }
     
     .gallery-large,
     .gallery-wide {
         grid-column: span 1;
     }
+    
+    .gallery-image,
+    .gallery-large .gallery-image {
+        height: 200px;
+    }
+    
+    .fluent-principles-grid,
+    .influences-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
 }
 
 @media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
     .hero-title {
         font-size: 48px;
     }
     
     .section-title {
         font-size: 36px;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .section-subtitle {
+        font-size: 18px;
     }
     
     .tile-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .tile {
+        height: 180px;
+        padding: var(--spacing-lg);
+    }
+    
+    .tile-title {
+        font-size: 28px;
     }
     
     .evolution-step {
@@ -1564,6 +1697,11 @@ p {
     
     .metrics-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .metric-item {
+        padding: var(--spacing-md);
     }
     
     .designer-name,
@@ -1577,5 +1715,14 @@ p {
     
     .color-swatches {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 14px;
+    }
+    
+    section {
+        padding: var(--spacing-xl) 0;
     }
 }

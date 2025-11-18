@@ -12,9 +12,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
-    if (navToggle) {
+    if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
         });
     }
     
@@ -40,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Close mobile menu if open
                     if (navMenu.classList.contains('active')) {
                         navMenu.classList.remove('active');
+                        navToggle.classList.remove('active');
                     }
                 }
             }
