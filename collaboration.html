@@ -44,12 +44,19 @@
         <div class="container">
             <article class="story-article">
                 <div class="story-intro">
-                    <p class="text-large">This website was created through a collaborative partnership between a human designer and an AI assistant, exploring Microsoft's Fluent Design and Metro principles. This is a reflection on that process—the challenges, iterations, and insights gained.</p>
+                    <p class="text-large">This website was created through a
+                    collaborative partnership between a human designer and an
+                    AI assistant, exploring Microsoft's Fluent Design and
+                    Metro principles. This is a reflection on that process—the
+                    challenges, iterations, and insights gained.</p>
                 </div>
 
                 <section class="story-section">
                     <h2>Initial Vision & Requirements</h2>
-                    <p>The project began with a clear directive: create an authentic Fluent Design / Metro styled website that educates visitors about this influential design language. The human partner provided specific requirements:</p>
+                    <p>The project began with a clear directive: create an
+                    authentic Fluent Design / Metro styled website that
+                    educates visitors about this influential design language.
+                    The human partner provided specific requirements:</p>
                     <ul class="story-list">
                         <li>Follow the comprehensive Fluent/Metro style guide (intermediate level ⭐⭐)</li>
                         <li>Meet all grading criteria for design authenticity, technical quality, and accessibility</li>
@@ -57,26 +64,41 @@
                         <li>Use the authentic Metro color palette (Microsoft Blue, Magenta, Teal, Orange, Lime)</li>
                         <li>Create multiple pages showcasing the design evolution and principles</li>
                     </ul>
-                    <p>As the AI partner, I understood this required deep knowledge of both Metro's 2010 origins and Fluent's modern evolution. The challenge was balancing historical accuracy with contemporary web standards.</p>
+                    <p>As the AI partner, I understood this required deep
+                    knowledge of both Metro's 2010 origins and Fluent's
+                    modern evolution. The challenge was balancing historical
+                    accuracy with contemporary web standards.</p>
                 </section>
 
                 <section class="story-section">
                     <h2>Research & Understanding Phase</h2>
-                    <p>Before writing any code, I analyzed the 509-line Fluent/Metro style guide comprehensively. Key learnings included:</p>
+                    <p>Before writing any code, I analyzed the 509-line
+                    Fluent/Metro style guide comprehensively. Key learnings
+                    included:</p>
                     
                     <div class="insight-card">
                         <h3>Typography as Primary Element</h3>
-                        <p>Hero text at 72-96px wasn't just large—it was <em>dramatically</em> large. This required confidence in implementation. H1 at 56px, body at 14-16px. The scale creates hierarchy through size alone, not color or decoration.</p>
+                        <p>Hero text at 72-96px wasn't just large—it was
+                        <em>dramatically</em> large. This required confidence
+                        in implementation. H1 at 56px, body at 14-16px. The
+                        scale creates hierarchy through size alone, not color
+                        or decoration.</p>
                     </div>
 
                     <div class="insight-card">
                         <h3>Content Before Chrome</h3>
-                        <p>Metro's founding principle meant every design decision prioritized information over decoration. No unnecessary ornaments, no skeuomorphic elements. Function drives form.</p>
+                        <p>Metro's founding principle meant every design
+                        decision prioritized information over decoration. No
+                        unnecessary ornaments, no skeuomorphic elements.
+                        Function drives form.</p>
                     </div>
 
                     <div class="insight-card">
                         <h3>Information Density</h3>
-                        <p>Unlike spacious iOS or Material Design, Fluent/Metro packs more content efficiently. This required careful balance—dense but not cluttered, utilitarian but not cold.</p>
+                        <p>Unlike spacious iOS or Material Design, Fluent/Metro
+                        packs more content efficiently. This required careful
+                        balance—dense but not cluttered, utilitarian but not
+                        cold.</p>
                     </div>
                 </section>
 
@@ -84,17 +106,22 @@
                     <h2>Build Process: Iterations & Decisions</h2>
                     
                     <h3>Sprint 1: Foundation & Typography</h3>
-                    <p>The first implementation focused on getting typography right. Using Segoe UI (with Inter fallback), I set:</p>
+                    <p>The first implementation focused on getting typography
+                    right. Using Segoe UI (with Inter fallback), I set:</p>
                     <ul class="story-list">
                         <li><strong>Hero:</strong> 96px, creating immediate visual impact</li>
                         <li><strong>H1:</strong> 56px for page titles</li>
                         <li><strong>H2:</strong> 42px for section headers</li>
                         <li><strong>Body:</strong> 15px for utilitarian readability</li>
                     </ul>
-                    <p><strong>Challenge:</strong> The human partner requested verification that typography matched authentic Microsoft design. I confirmed alignment with Windows 11 Settings app and Microsoft Teams typography scales.</p>
+                    <p><strong>Challenge:</strong> The human partner requested
+                    verification that typography matched authentic Microsoft
+                    design. I confirmed alignment with Windows 11 Settings
+                    app and Microsoft Teams typography scales.</p>
 
                     <h3>Sprint 2: Metro Tile Grid</h3>
-                    <p>The signature Metro tiles required special attention. Initial implementation used:</p>
+                    <p>The signature Metro tiles required special attention.
+                    Initial implementation used:</p>
                     <ul class="story-list">
                         <li>Bold Metro colors: Blue (#0078D7), Magenta (#D80073), Teal (#00ABA9), Orange (#FA6800), Lime (#A4C400)</li>
                         <li>8px border radius (Fluent evolution from flat Metro)</li>
@@ -102,10 +129,14 @@
                         <li>Varied tile sizes (1x1, 2x1) creating asymmetric interest</li>
                         <li>200ms hover animations with translateY and shadow lift</li>
                     </ul>
-                    <p><strong>Decision Point:</strong> Pure Metro (2010) had sharp corners and no shadows. Fluent (2017+) added rounded corners and subtle depth. I chose Fluent's refinements while maintaining Metro's bold color philosophy.</p>
+                    <p><strong>Decision Point:</strong> Pure Metro (2010) had
+                    sharp corners and no shadows. Fluent (2017+) added rounded
+                    corners and subtle depth. I chose Fluent's refinements
+                    while maintaining Metro's bold color philosophy.</p>
 
                     <h3>Sprint 3: Grading Compliance & Accessibility</h3>
-                    <p>The human partner emphasized meeting grading criteria. This required:</p>
+                    <p>The human partner emphasized meeting grading criteria.
+                    This required:</p>
                     <ul class="story-list">
                         <li><strong>Multiple Pages:</strong> Created index.html, timeline.html, and collaboration.html (this page)</li>
                         <li><strong>SEO Meta Tags:</strong> Added proper descriptions, keywords, Open Graph tags</li>
@@ -120,20 +151,34 @@
                     
                     <div class="challenge-card">
                         <h4>Challenge: Balancing Historical Accuracy with Modern Standards</h4>
-                        <p><strong>Problem:</strong> Pure Metro (2010) had no shadows or rounded corners. Modern Fluent (2021) has both. Which to implement?</p>
-                        <p><strong>Solution:</strong> Chose Fluent's refinements (4-8px radius, subtle shadows) while maintaining Metro's core principles (bold colors, typography dominance, content-first).</p>
+                        <p><strong>Problem:</strong> Pure Metro (2010) had no
+                        shadows or rounded corners. Modern Fluent (2021) has
+                        both. Which to implement?</p>
+                        <p><strong>Solution:</strong> Chose Fluent's refinements
+                        (4-8px radius, subtle shadows) while maintaining
+                        Metro's core principles (bold colors, typography
+                        dominance, content-first).</p>
                     </div>
 
                     <div class="challenge-card">
                         <h4>Challenge: Information Density vs. Mobile Usability</h4>
-                        <p><strong>Problem:</strong> Metro's information-dense design can overwhelm mobile screens.</p>
-                        <p><strong>Solution:</strong> Responsive typography scaling (clamp() functions), collapsing tile grid to single column on mobile, ensuring 44px minimum touch targets.</p>
+                        <p><strong>Problem:</strong> Metro's information-dense
+                        design can overwhelm mobile screens.</p>
+                        <p><strong>Solution:</strong> Responsive typography scaling
+                        (clamp() functions), collapsing tile grid to single
+                        column on mobile, ensuring 44px minimum touch
+                        targets.</p>
                     </div>
 
                     <div class="challenge-card">
                         <h4>Challenge: Accessibility Without Compromising Aesthetic</h4>
-                        <p><strong>Problem:</strong> Needed 90+ Lighthouse accessibility score while maintaining bold Metro aesthetic.</p>
-                        <p><strong>Solution:</strong> High contrast color ratios (white on colored backgrounds, black on white), semantic HTML structure, proper ARIA labels, keyboard navigation support.</p>
+                        <p><strong>Problem:</strong> Needed 90+ Lighthouse
+                        accessibility score while maintaining bold Metro
+                        aesthetic.</p>
+                        <p><strong>Solution:</strong> High contrast color ratios
+                        (white on colored backgrounds, black on white), semantic
+                        HTML structure, proper ARIA labels, keyboard navigation
+                        support.</p>
                     </div>
                 </section>
 
@@ -191,35 +236,52 @@
                     
                     <div class="lesson-card">
                         <h4>1. Documentation is Critical</h4>
-                        <p>The detailed style guide (with hex codes, pixel sizes, specific fonts) eliminated ambiguity. AI partners need precise specifications, not vague aesthetic descriptions.</p>
+                        <p>The detailed style guide (with hex codes, pixel sizes,
+                        specific fonts) eliminated ambiguity. AI partners need
+                        precise specifications, not vague aesthetic
+                        descriptions.</p>
                     </div>
 
                     <div class="lesson-card">
                         <h4>2. Humans Guide Philosophy, AI Implements Details</h4>
-                        <p>The human ensured authenticity to Fluent Design principles. I handled CSS architecture, responsive breakpoints, accessibility attributes—technical execution of the vision.</p>
+                        <p>The human ensured authenticity to Fluent Design
+                        principles. I handled CSS architecture, responsive
+                        breakpoints, accessibility attributes—technical
+                        execution of the vision.</p>
                     </div>
 
                     <div class="lesson-card">
                         <h4>3. Iterative Review Catches What's Missed</h4>
-                        <p>Initial build met style requirements but missed grading criteria (multiple pages, SEO, ARIA labels). The human's request for grading compliance revealed gaps.</p>
+                        <p>Initial build met style requirements but missed
+                        grading criteria (multiple pages, SEO, ARIA labels).
+                        The human's request for grading compliance revealed
+                        gaps.</p>
                     </div>
 
                     <div class="lesson-card">
                         <h4>4. Balance Authenticity with Practicality</h4>
-                        <p>Pure 2010 Metro would fail modern accessibility standards. Fluent's evolution (subtle shadows, rounded corners) maintains philosophy while meeting contemporary requirements.</p>
+                        <p>Pure 2010 Metro would fail modern accessibility
+                        standards. Fluent's evolution (subtle shadows, rounded
+                        corners) maintains philosophy while meeting contemporary
+                        requirements.</p>
                     </div>
                 </section>
 
                 <section class="story-section">
                     <h2>Final Reflection</h2>
-                    <p>This project demonstrates that effective human-AI collaboration in design requires:</p>
+                    <p>This project demonstrates that effective human-AI
+                    collaboration in design requires:</p>
                     <ul class="story-list">
                         <li><strong>Clear specifications</strong> (style guides with measurements, not just descriptions)</li>
                         <li><strong>Iterative dialogue</strong> (review, feedback, refinement cycles)</li>
                         <li><strong>Shared understanding of goals</strong> (educational authenticity vs. commercial polish)</li>
                         <li><strong>Complementary strengths</strong> (human aesthetic judgment, AI technical implementation)</li>
                     </ul>
-                    <p>The result is an authentic Fluent Design educational website that honors Microsoft's 15-year design evolution from Metro to modern Windows 11, while meeting contemporary web standards for accessibility, performance, and user experience.</p>
+                    <p>The result is an authentic Fluent Design educational
+                    website that honors Microsoft's 15-year design evolution
+                    from Metro to modern Windows 11, while meeting
+                    contemporary web standards for accessibility, performance,
+                    and user experience.</p>
                 </section>
 
                 <div class="metrics-section">
