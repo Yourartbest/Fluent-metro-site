@@ -3,6 +3,11 @@
     Date: 11/12/25
     Course: IS373-001
     Project: Fluent Design / Metro Website - Main Stylesheet
+    
+    Design System:
+    - Golden Ratio Typography (\u03c6 = 1.618)
+    - Optimized for Firefox and Safari browsers
+    - Responsive breakpoints with golden ratio scaling
 */
 
 /* Fluent Design / Metro Style CSS */
@@ -27,17 +32,31 @@
     --color-gray-700: #323130;
     --color-gray-900: #1A1A1A;
     
-    /* Typography */
-    --font-primary: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    /* Golden Ratio Typography Scale (φ = 1.618) */
+    /* Base size: 16px, scaled by golden ratio */
+    --font-base: 16px;           /* Base (φ^0) */
+    --font-scale-1: 25.888px;    /* φ^1 ≈ 26px */
+    --font-scale-2: 41.887px;    /* φ^2 ≈ 42px */
+    --font-scale-3: 67.773px;    /* φ^3 ≈ 68px */
+    --font-scale-4: 109.656px;   /* φ^4 ≈ 110px */
+    --font-scale-down-1: 9.889px;  /* φ^-1 ≈ 10px */
+    --font-scale-down-2: 6.112px;  /* φ^-2 ≈ 6px */
     
-    /* Spacing */
-    --spacing-xs: 8px;
-    --spacing-sm: 12px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-2xl: 48px;
-    --spacing-3xl: 64px;
+    /* Line Height Golden Ratio */
+    --line-height-base: 1.618;   /* φ */
+    --line-height-heading: 1.272; /* φ^0.5 ≈ 1.272 */
+    
+    /* Typography */
+    --font-primary: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+    
+    /* Spacing Based on Golden Ratio */
+    --spacing-xs: 8px;      /* φ^-1 * 13 ≈ 8px */
+    --spacing-sm: 13px;     /* Base unit */
+    --spacing-md: 21px;     /* φ * 13 ≈ 21px */
+    --spacing-lg: 34px;     /* φ^2 * 13 ≈ 34px */
+    --spacing-xl: 55px;     /* φ^3 * 13 ≈ 55px */
+    --spacing-2xl: 89px;    /* φ^4 * 13 ≈ 89px */
+    --spacing-3xl: 144px;   /* φ^5 * 13 ≈ 144px */
     
     /* Border Radius (Fluent) */
     --radius-sm: 4px;
@@ -61,41 +80,66 @@
 
 body {
     font-family: var(--font-primary);
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: var(--font-base);
+    line-height: var(--line-height-base);
     color: var(--color-black);
     background-color: var(--color-white);
+    /* Enhanced font rendering for Firefox and Safari */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1, "liga" 1;
+    /* Firefox-specific smooth scrolling */
+    scroll-behavior: smooth;
 }
 
-/* ==================== Typography ==================== */
+/* Firefox-specific fixes */
+@-moz-document url-prefix() {
+    body {
+        font-weight: 400;
+    }
+}
+
+/* Safari-specific optimizations */
+@supports (-webkit-backdrop-filter: blur(10px)) {
+    .hero-bg-overlay,
+    .nav-bar {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
+
+/* ==================== Typography (Golden Ratio) ==================== */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    line-height: 1.2;
+    line-height: var(--line-height-heading);
     margin-bottom: var(--spacing-md);
+    /* Improved rendering for Firefox */
+    text-rendering: optimizeLegibility;
 }
 
 h1 {
-    font-size: 56px;
+    font-size: var(--font-scale-2);  /* 42px - Golden ratio scale */
     font-weight: 600;
     letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: 42px;
+    font-size: var(--font-scale-1);  /* 26px - Golden ratio scale */
     font-weight: 600;
     letter-spacing: -0.01em;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: var(--font-base);     /* 16px - Base golden ratio */
     font-weight: 600;
+    line-height: var(--line-height-base);
 }
 
 h4 {
-    font-size: 20px;
+    font-size: var(--font-base);
     font-weight: 600;
+    line-height: var(--line-height-base);
 }
 
 p {
@@ -140,10 +184,11 @@ p {
 }
 
 .section-title {
-    font-size: 48px;
+    font-size: var(--font-scale-3);  /* 68px - Golden ratio φ^3 */
     font-weight: 600;
     margin-bottom: var(--spacing-2xl);
     text-align: left;
+    line-height: var(--line-height-heading);
 }
 
 /* ==================== Navigation ==================== */
@@ -306,23 +351,27 @@ p {
 }
 
 .hero-title {
-    font-size: 96px;
+    font-size: var(--font-scale-4);  /* 110px - Golden ratio φ^4 */
     font-weight: 600;
     letter-spacing: -0.03em;
     margin-bottom: var(--spacing-md);
-    line-height: 1;
+    line-height: var(--line-height-heading);
+    /* Safari text rendering optimization */
+    -webkit-text-stroke: 0.3px transparent;
+    text-rendering: geometricPrecision;
 }
 
 .hero-subtitle {
-    font-size: 28px;
+    font-size: var(--font-scale-1);  /* 26px - Golden ratio φ^1 */
     font-weight: 400;
     margin-bottom: var(--spacing-lg);
     opacity: 0.9;
+    line-height: var(--line-height-base);
 }
 
 .hero-description {
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: var(--font-base);     /* 16px - Base golden ratio */
+    line-height: var(--line-height-base);
     max-width: 700px;
     margin-bottom: var(--spacing-xl);
     opacity: 0.9;
@@ -341,15 +390,16 @@ p {
     }
     
     .hero-title {
-        font-size: 56px;
+        font-size: var(--font-scale-3);  /* 68px - Golden ratio */
     }
     
     .hero-subtitle {
-        font-size: 20px;
+        font-size: var(--font-base);     /* 16px - Base golden ratio */
     }
     
     .hero-description {
-        font-size: 16px;
+        font-size: var(--font-base);
+        line-height: var(--line-height-base);
     }
 }
 
@@ -360,15 +410,16 @@ p {
     }
     
     .hero-title {
-        font-size: 42px;
+        font-size: var(--font-scale-2);  /* 42px - Golden ratio */
     }
     
     .hero-subtitle {
-        font-size: 18px;
+        font-size: var(--font-base);     /* 16px - Base golden ratio */
     }
     
     .hero-description {
-        font-size: 15px;
+        font-size: var(--font-base);
+        line-height: var(--line-height-base);
     }
     
     .hero-actions {
@@ -456,9 +507,10 @@ p {
 }
 
 .tile-title {
-    font-size: 24px;
+    font-size: var(--font-scale-1);  /* 26px - Golden ratio φ^1 */
     font-weight: 600;
     margin-bottom: var(--spacing-xs);
+    line-height: var(--line-height-heading);
 }
 
 .tile-text {
@@ -1599,6 +1651,63 @@ p {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* ==================== Browser-Specific Optimizations ==================== */
+/* Firefox scrollbar styling */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-blue) var(--color-gray-100);
+}
+
+/* Safari/Webkit scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-blue);
+    border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-magenta);
+}
+
+/* Firefox-specific button improvements */
+@-moz-document url-prefix() {
+    button,
+    .btn {
+        -moz-appearance: none;
+        appearance: none;
+    }
+}
+
+/* Safari button improvements */
+button,
+.btn {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Improve image rendering in Firefox and Safari */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Better grid support for older Safari */
+@supports (display: grid) {
+    .tile-grid,
+    .card-grid,
+    .gallery-grid {
+        display: grid;
+    }
+}
+
 /* ==================== Responsive Enhancements ==================== */
 @media (max-width: 768px) {
     .container {
@@ -1654,20 +1763,21 @@ p {
 
 @media (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 15px;  /* Maintain base for readability */
     }
     
     .hero-title {
-        font-size: 48px;
+        font-size: var(--font-scale-2);  /* 42px - Golden ratio */
     }
     
     .section-title {
-        font-size: 36px;
+        font-size: var(--font-scale-2);  /* 42px - Golden ratio φ^2 */
         margin-bottom: var(--spacing-lg);
+        line-height: var(--line-height-heading);
     }
     
     .section-subtitle {
-        font-size: 18px;
+        font-size: var(--font-base);     /* 16px - Base golden ratio */
     }
     
     .tile-grid {
@@ -1681,7 +1791,8 @@ p {
     }
     
     .tile-title {
-        font-size: 28px;
+        font-size: var(--font-scale-1);  /* 26px - Golden ratio φ^1 */
+        line-height: var(--line-height-heading);
     }
     
     .evolution-step {
