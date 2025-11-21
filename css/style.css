@@ -165,7 +165,7 @@ p {
 }
 
 .section {
-    padding: var(--spacing-3xl) 0;
+    padding: var(--spacing-xl) 0;  /* 55px - Reduced from 144px */
 }
 
 .section-light {
@@ -186,7 +186,7 @@ p {
 .section-title {
     font-size: var(--font-scale-3);  /* 68px - Golden ratio φ^3 */
     font-weight: 600;
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-lg);  /* 34px - Reduced from 89px */
     text-align: left;
     line-height: var(--line-height-heading);
 }
@@ -1834,6 +1834,6 @@ img {
     }
     
     section {
-        padding: var(--spacing-xl) 0;
+        padding: var(--spacing-lg) 0;  /* 34px - Reduced for mobile */
     }
 }
